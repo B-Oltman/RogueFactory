@@ -1,17 +1,12 @@
 ## Readme
 This document will be updated as the project evolves.
 
-# Final Project - Rogue Pirate
-
-## CSC250 Completion Status
-For class, I was able to implement a lot of the core features needed to build the game. Most of my focus went into creating a system to handle rendering and the world editor. Most of your exploration should be done in the World Editor, but there is also a Camera Transition test which will eventually be used in gameplay, to transition between the zones.
-
 There is still a lot to do for this project, I intend to continue it after the class is finished. I have made sure to meet all the project requirements up to this point. Please read below for some important notes on building and executing the engine.
 
-**Rogue Pirate is an ASCII roguelike adventure game including a world editor, island, dungeon, and sea exploration with future support for procedural world generation.**
+**Rogue Pirate is an ASCII roguelike adventure game including a world editor, island, dungeon, and sea exploration with future support for procedural world generation. It is used as a test game for the rogueFactory engine.**
 
 ## Gameplay
-The goal of Rogue Pirate is to survive, explore, collect loot, and find the buried treasure. This is my final project for CSC250 and will utilize various concepts learned in the class.
+The goal of Rogue Pirate is to survive, explore, collect loot, and find the buried treasure.
 
 The game will contain a mixture of real-time and turn-based events. Some creatures, for example, will continue to move and attack independently from 'turns.'
 
@@ -19,10 +14,10 @@ The game will contain a mixture of real-time and turn-based events. Some creatur
 The game will be sea-based meaning the pirate player explores the seas by boat while fighting various sea monsters and gathering resources/experience along the way. There will also be islands which can be explored and dungeon portals which will bring the player to a random dungeon.
 
 ## Building Rogue Pirate
-Simply execute the `build.sh` script in a UNIX terminal `./build.sh`. This shell script includes all of the compilation and linker flags required to build RP on dsunix.
+Simply execute the `build.sh` script in a UNIX terminal `./build.sh`. This shell script includes all of the compilation and linker flags required to build RP.
 
 **Build Requirements**
-- [ ] Must have Ncurses library installed on the system (already installed on Dsunix). This library is used to handle different terminal escape codes for more control.
+- [ ] Must have Ncurses library installed on the system. This library is used to handle different terminal escape codes for more control.
 
 ## Executing Rogue Pirate
 
@@ -42,30 +37,6 @@ Simply execute the `build.sh` script in a UNIX terminal `./build.sh`. This shell
 ### 3. The game requires that client terminal font is set to some constant-width monospace font. I suggest **liberation mono** if available.
 
 ### 4. When running RP via SSH from a remote terminal, there are times when using the mouse that the terminal will lose focus if the mouse is moved quickly. If hotkeys aren't working after using the mouse, you need to click in the terminal a couple of times to give it focus again. This problem doesn't exist if executing the game locally.
-
-## Project Requirements
-Below is a list of the project requirements and how I have used, or intend to use them in my project.
-
-- [ ] Strings Manipulation - Developed custom string library for easier management of the many string operations that will be required in RP. See `rp_strings.c`.
-
-- [ ] 2D Arrays - Used for worldwide coordinates in rp_game.c. (Makes accessing world position more intuitive than converting a single dimensional array.). Also used for handling related strings, such as in the MenuItems struct in rp_game.h
-
-- [ ] File I/O (More than simply outputting) - Used for saving and loading custom binary file type for the created worlds.
-
-- [ ] Command Line Arguments - Used to pass random seed value so that various randomized aspects of the game can be replicated and shared by remembering your the value. This argument is optional.
-
-- [ ] Pass by Pointer - Used often, for example, in the `AllocateTileBuffer()` function, or whenever I need to access a struct in a function but don't want to pass the entire thing. Etc...
-
-- [ ] Structures - Used often for grouping related data types to build components.
-
-- [ ] Linked Lists (Pointers) - Will be used for tracking living and dead creatures, spawned vs. collected items, and probably in the inventory system. Used an array-linked list for handling color pairs.
-
-- [ ] Header Files (Multiple C Files) - Used extensively to keep the project organized.
-
-- [ ] Sorting - Will be used in situations where heavy searching of an array is required. Only makes sense if the array needs to be searched multiple times for a single sort (not currently implemented).
-
-- [ ] Stack/Queue - May use for custom memory allocator in the future (not currently implemented).
-
 
 ## Development Log (Chronological order)
 ### The Grid
