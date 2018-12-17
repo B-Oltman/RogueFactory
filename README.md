@@ -1,7 +1,7 @@
 ## Readme
 This document will be updated as the project evolves.
 
-There is still a lot to do for this project, I intend to continue it after the class is finished. I have made sure to meet all the project requirements up to this point. Please read below for some important notes on building and executing the engine.
+ Please read below for some important notes on building and executing the engine.
 
 **Rogue Pirate is an ASCII roguelike adventure game including a world editor, island, dungeon, and sea exploration with future support for procedural world generation. It is used as a test game for the rogueFactory engine.**
 
